@@ -31,7 +31,7 @@ public class S1316 {
                         check = false;
                         break;
                     }
-                    //character에 포함되어 있지 않으면 처음 나온 것이므로
+                    //character에 포함되어 있지 않으면 처음 나온 것 이므로
                     else{
                         //set인 character에 추가
                         character.add(word[j]);
