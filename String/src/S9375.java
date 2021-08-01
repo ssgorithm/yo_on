@@ -12,13 +12,17 @@ public class S9375 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     static StringBuilder sb;
+    //테스트 케이스, 옷 개수 변수
     public static int tc, cnum;
 
     public static void main(String args[]) throws IOException {
         sb = new StringBuilder();
 
+        //테스트 케이스 입력받기
         tc = Integer.parseInt(br.readLine());
+        //테스트 케이스만큼 반복
         for(int i = 0; i < tc; i++){
+            //가능한 개수
             int result = 1;
             HashMap<String, Integer> hashmap = new HashMap<>();
             cnum = Integer.parseInt(br.readLine());
@@ -36,6 +40,7 @@ public class S9375 {
                 String key = keys.next();
                 result *= (hashmap.get(key) + 1);
             }
+            //각각의 개수 + 1해서 곱한 후 1 빼주기
             sb.append(result-1).append('\n');
         }
         System.out.print(sb.toString());
