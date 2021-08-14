@@ -33,6 +33,7 @@ public class G1922 {
         N = Integer.parseInt(br.readLine());
         M = Integer.parseInt(br.readLine());
 
+        //정보 입력받기
         for(int i = 0; i < M; i++){
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
@@ -46,8 +47,11 @@ public class G1922 {
             parent[i] = i;
         }
 
+        //거리 낮은 순으로 정렬
         Collections.sort(dists);
 
+        //만약 싸이클을 이룬다면 즉, 이미 연결되어 있다면 skip
+        //연결되어 있지 않다면 값에 포함시킨 후 연결처리(union)
         for(Dist d : dists) {
             int a = d.a;
             int b = d.b;
