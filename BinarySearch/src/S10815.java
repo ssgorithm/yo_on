@@ -36,7 +36,7 @@ public class S10815 {
         }
         System.out.print(sb.toString());
     }
-    private static boolean binarySearch(int num) {
+    private static boolean binarySearch(int num) { 
         int leftIndex = 0;
         int rightIndex = n - 1;
 
